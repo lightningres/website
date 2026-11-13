@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LightningRes: Agentic Resource Scheduling Engine for Tour Operators</title>
+  <meta name="description" content="LightningRes is a deterministic, agent-native reservation system for Australian tour operators running scheduled, limited-capacity trips. Now taking early-access operators.">
+  <link rel="canonical" href="https://www.lightningres.com/">
+  <meta name="theme-color" content="#0b2a4a">
+  <link rel="icon" href="/assets/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="LightningRes">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:url" content="https://www.lightningres.com/">
+  <meta property="og:title" content="LightningRes: Agentic Resource Scheduling Engine">
+  <meta property="og:description" content="A deterministic, agent-native reservation system for tour operators. Now taking early-access operators.">
+  <meta property="og:image" content="https://www.lightningres.com/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="LightningRes logo with the line Agentic Resource Scheduling Engine">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LightningRes: Agentic Resource Scheduling Engine">
+  <meta name="twitter:description" content="A deterministic, agent-native reservation system for tour operators. Now taking early-access operators.">
+  <meta name="twitter:image" content="https://www.lightningres.com/assets/og-image.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "LightningRes",
+    "legalName": "LightningRes Pty Ltd",
+    "url": "https://www.lightningres.com/",
+    "logo": "https://www.lightningres.com/assets/apple-touch-icon.png",
+    "email": "hello@lightningres.com",
+    "foundingDate": "2026-10",
+    "description": "Reservation and booking software for tour operators who run scheduled, limited-capacity trips.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "QLD",
+      "addressCountry": "AU"
+    },
+    "areaServed": "AU"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="LightningRes home">
+        <img src="/assets/logo.svg" alt="LightningRes" width="168" height="32">
+      </a>
+      <nav class="nav" aria-label="Main">
+        <ul>
+          <li><a href="#product">Product</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#payments">Payments</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-primary" href="#early-access">Get early access</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <div class="hero-text">
+          <p class="badge">Now taking early&#8209;access operators</p>
+          <h1 id="hero-title">Agentic resource scheduling for tour operators.</h1>
+          <p class="lede">LightningRes is a deterministic, agent-native booking engine for scheduled, limited-capacity trips. It is built so AI assistants can sell your seats while every booking follows your capacity, your prices and your rules.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#early-access">Get early access</a>
+            <a class="btn btn-ghost" href="#pricing">See pricing</a>
+          </div>
+          <p class="tagline"><strong>LightningRes: Agentic Resource Scheduling Engine.</strong> A deterministic, agent-native solution for tour operators.</p>
+        </div>
+
+        <figure class="hero-art" role="img" aria-label="Illustration: an AI assistant asks for two seats, which are checked against the operator’s capacity and prices. Below, a reef day trip shows seats filling across two shared legs, booked through five channels that all draw from the same seats.">
+          <div class="card ask">
+            <p class="ask-from">Request from an AI assistant</p>
+            <p class="ask-q">“Two adults on the reef day trip, Saturday 07:30, to the island.”</p>
+            <ul class="ask-checks">
+              <li>Seats free on Marina → Island</li>
+              <li>Your published price</li>
+              <li>Handed to your checkout</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="card-head">
+              <span class="card-title">Reef day trip</span>
+              <span class="card-meta">Sat 07:30 · 42 seats</span>
+            </div>
+            <ol class="legs">
+              <li class="leg">
+                <span class="leg-name">Marina → Island</span>
+                <span class="leg-count">40 / 42</span>
+                <span class="seats seats-a"></span>
+              </li>
+              <li class="leg">
+                <span class="leg-name">Island → Outer reef</span>
+                <span class="leg-count">30 / 42</span>
+                <span class="seats seats-b"></span>
+                <span class="leg-note">14 stay on the island · 4 join here</span>
+              </li>
+            </ol>
+            <ul class="chips">
+              <li>Booking page <b>17</b></li>
+              <li>Phone <b>6</b></li>
+              <li>Agents <b>9</b></li>
+              <li>Partner API <b>8</b></li>
+              <li>AI assistant <b>4</b></li>
+            </ul>
+            <p class="card-foot">2 seats left to the island. Every channel sees the same 2.</p>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="product" aria-labelledby="product-title">
+      <div class="wrap">
+        <div class="section-intro">
+          <span class="marker" aria-hidden="true"></span>
+          <h2 id="product-title">Built for the way scheduled tours really run</h2>
+          <p>LightningRes is a reservation and booking system for day boats to the reef, overnight liveaboards, day bus tours with hotel pickups and scenic flights in fixed time slots. Here is what it is built to do.</p>
+        </div>
+
+        <svg width="0" height="0" class="sprite" aria-hidden="true" focusable="false">
+          <symbol id="i-channels" viewBox="0 0 24 24"><path d="M12 3 3 7.5l9 4.5 9-4.5L12 3Z"/><path d="m3 12 9 4.5 9-4.5"/><path d="m3 16.5 9 4.5 9-4.5"/></symbol>
+          <symbol id="i-boat" viewBox="0 0 24 24"><path d="M3 15h18l-2.5 4.5h-13L3 15Z"/><path d="M6 15V9h12v6"/><path d="M9 9V5.5h6V9"/><path d="M9 12h.01M12 12h.01M15 12h.01"/></symbol>
+          <symbol id="i-check" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="m8.5 13 2.5 2.5 4.5-5"/></symbol>
+          <symbol id="i-balance" viewBox="0 0 24 24"><path d="M12 4v16M7 20h10"/><path d="M5 7h14"/><path d="m5 7-3 6a3 3 0 0 0 6 0L5 7ZM19 7l-3 6a3 3 0 0 0 6 0l-3-6Z"/></symbol>
+          <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 4v16h16"/><path d="m7 15 4-4 3 3 5-6"/><path d="M15 8h4v4"/></symbol>
+          <symbol id="i-ask" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.2A8 8 0 1 1 20 12Z"/><path d="M9.5 10a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.5v.2M12 17h.01"/></symbol>
+        </svg>
+
+        <ul class="features">
+          <li class="feature">
+            <div class="icon"><svg aria-hidden="true"><use href="#i-channels"/></svg></div>
+            <h3>One inventory, every channel</h3>
+            <p>Your booking page, phone bookings with payment links, an agent portal for tour desks and wholesalers, marketplaces and distributors through one partner API (OCTO standard), and AI assistants all draw from the same seats. It is built so the last seat can never be sold twice.</p>
+          </li>
+          <li class="feature">
+            <div class="icon"><svg aria-hidden="true"><use href="#i-boat"/></svg></div>
+            <h3>Built for boats, buses and cabins</h3>
+            <p>Shared legs on multi-stop voyages, cabins and berths across nights, dive sessions, hotel pickups and third-party allotments live in one capacity model. Each kind of trip is modelled the way it actually runs, not forced into a generic time slot.</p>
+          </li>
+          <li class="feature">
+            <div class="icon"><svg aria-hidden="true"><use href="#i-check"/></svg></div>
+            <h3>Run the day</h3>
+            <p>Manifests, digital waivers and check-in are designed to work on a moving deck, in bright sun, with one free hand. Crew can see who is booked, who has signed and who is aboard.</p>
+          </li>
+          <li class="feature">
+            <div class="icon"><svg aria-hidden="true"><use href="#i-balance"/></svg></div>
+            <h3>Every dollar explained</h3>
+            <p>A daily close is built to reconcile bookings, payments and payouts to a balanced day. Exports to Xero and MYOB mean your bookkeeper starts from numbers that already agree.</p>
+          </li>
+          <li class="feature">
+            <div class="icon"><svg aria-hidden="true"><use href="#i-chart"/></svg></div>
+            <h3>Measurable from the first booking</h3>
+            <p>One booking reference follows each guest across every channel, from first click to check-in. Marketing attribution and server-side conversion tracking are designed in, so you can see which spend fills seats.</p>
+          </li>
+          <li class="feature">
+            <div class="icon"><svg aria-hidden="true"><use href="#i-ask"/></svg></div>
+            <h3>AI that helps, not decides</h3>
+            <p>Owners will be able to ask questions of their own data in plain English. AI never changes prices or confirms bookings on its own.</p>
+          </li>
+        </ul>
+
+        <div class="showcase">
+          <figure>
+            <div class="card" role="img" aria-label="Illustration: a manifest for the reef day trip showing guests, waiver status and check-in.">
+              <div class="card-head">
+                <span class="card-title">Manifest</span>
+                <span class="card-meta">Reef day trip · 32 of 44 aboard</span>
+              </div>
+              <ul class="rows">
+                <li><span>A. Nguyen <span class="num">×2</span></span><small>Waivers signed</small><span class="pill pill-done">Aboard</span></li>
+                <li><span>J. Taylor <span class="num">×4</span></span><small>Waivers signed · Agent booking</small><span class="pill pill-done">Aboard</span></li>
+                <li><span>M. Rossi <span class="num">×1</span></span><small>Waiver to sign at the gangway</small><span class="pill pill-wait">Waiting</span></li>
+                <li><span>K. Patel <span class="num">×3</span></span><small>Waivers signed · Joins at Island</small><span class="pill pill-wait">Waiting</span></li>
+              </ul>
+              <span class="tap">Check in M. Rossi</span>
+            </div>
+            <figcaption><strong>Run the day.</strong> Large targets and high contrast, made for a deck at 6 am.</figcaption>
+          </figure>
+          <figure>
+            <div class="card" role="img" aria-label="Illustration: a daily close where payments, refunds, Stripe fees and the payout reconcile to a balanced day.">
+              <div class="card-head">
+                <span class="card-title">Daily close</span>
+                <span class="card-meta">Saturday · AUD</span>
+              </div>
+              <ul class="rows">
+                <li><span>Bookings taken</span><span class="num">$8,420.00</span></li>
+                <li><span>Payments received</span><span class="num">$8,420.00</span></li>
+                <li><span>Refunds</span><span class="num">−$180.00</span></li>
+                <li><span>Stripe fees</span><span class="num">−$146.20</span></li>
+                <li><span>Payout to your bank</span><span class="num">$8,093.80</span></li>
+              </ul>
+              <div class="total">
+                <span>Difference $0.00</span>
+                <span class="balanced"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Balanced</span>
+              </div>
+            </div>
+            <figcaption><strong>Every dollar explained.</strong> Ready to export to Xero or MYOB.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-mist" id="payments" aria-labelledby="payments-title">
+      <div class="wrap payments-grid">
+        <div>
+          <span class="marker" aria-hidden="true"></span>
+          <h2 id="payments-title">Your guests pay you, directly</h2>
+          <p class="promise">We take nothing from your payments and add nothing to your customer’s price.</p>
+          <ul class="ticks">
+            <li>Each operator connects its own Stripe account through Stripe Connect.</li>
+            <li>Guests pay you directly. You are the merchant of record for your tours.</li>
+            <li>LightningRes is never the merchant of record and never holds guest money.</li>
+            <li>You pay Stripe’s published processing rate, to Stripe. Stripe keeps its processing fee on refunded payments.</li>
+            <li>Your LightningRes subscription is billed separately, based on passengers carried. See <a href="#pricing">pricing</a>.</li>
+          </ul>
+        </div>
+        <figure class="flow" role="img" aria-label="Diagram: the guest pays the operator’s own Stripe account, Stripe pays out to the operator’s bank, and LightningRes sends the booking but never holds the money.">
+          <ol>
+            <li><strong>Your guest</strong><span>Books and pays on any channel</span></li>
+            <li data-step="Pays"><strong>Your Stripe account</strong><span>You are the merchant of record</span></li>
+            <li data-step="Pays out"><strong>Your bank account</strong><span>On your normal Stripe payout schedule</span></li>
+          </ol>
+          <div class="aside">
+            <p><strong>LightningRes</strong> records the booking and reconciles the day. It never sits in the money flow.</p>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="pricing" aria-labelledby="pricing-title">
+      <div class="wrap">
+        <div class="section-intro">
+          <span class="marker" aria-hidden="true"></span>
+          <h2 id="pricing-title">Pay for passengers carried. Every feature included.</h2>
+          <p>One subscription per operator, metered on passengers carried each month. Every feature is included at every volume. Prices are in Australian dollars and exclude GST.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <div class="table-card">
+            <table>
+              <caption>Monthly charge<span>Each rate applies only to passengers within its range.</span></caption>
+              <thead>
+                <tr><th scope="col">Passengers in the month</th><th scope="col">Charge (AUD, ex GST)</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">First 120</th><td>$65 <small>monthly minimum</small></td></tr>
+                <tr><th scope="row">121 to 500</th><td>$0.90 <small>each</small></td></tr>
+                <tr><th scope="row">501 to 1,000</th><td>$0.85 <small>each</small></td></tr>
+                <tr><th scope="row">1,001 to 3,000</th><td>$0.80 <small>each</small></td></tr>
+                <tr><th scope="row">3,001 to 8,000</th><td>$0.75 <small>each</small></td></tr>
+                <tr><th scope="row">Above 8,000</th><td>$0.75 <small>each, or talk to us about an enterprise agreement</small></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="example">
+            <h3>Worked example</h3>
+            <p>An operator carries 500 passengers in a month.</p>
+            <ul class="sum">
+              <li><span>First 120 passengers</span><span>$65.00</span></li>
+              <li><span>380 × $0.90</span><span>$342.00</span></li>
+              <li class="grand"><span>Total</span><span>$407.00</span></li>
+            </ul>
+            <p class="fine">Plus GST. Cancelled passengers and crew are not counted.</p>
+          </div>
+        </div>
+
+        <ul class="terms-list">
+          <li>
+            <h3>Who counts</h3>
+            <p>A passenger counts if their booking was confirmed at departure time, from any channel. Crew never count.</p>
+          </li>
+          <li>
+            <h3>We don’t charge for cancellations</h3>
+            <p>Passengers on departures you cancel (weather, breakdown, minimum not reached) and passengers who cancel before departure do not count.</p>
+          </li>
+          <li>
+            <h3>90 days free</h3>
+            <p>No card, no cap.</p>
+          </li>
+          <li>
+            <h3>Billed monthly, in arrears</h3>
+            <p>You pay for passengers actually carried. We tell you the amount three days before your card is charged and send a receipt. No annual contract and no minimum term.</p>
+          </li>
+          <li>
+            <h3>Leave any time</h3>
+            <p>Take a full data export whenever you like. If you stop paying, your account goes dormant: read-only access and full export for 12 months, nothing deleted, one-click reactivation.</p>
+          </li>
+          <li>
+            <h3>No surprise price rises</h3>
+            <p>Prices change only on 30 days’ written notice, from the next billing period. Cancel before then and you pay nothing further.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section early" id="early-access" aria-labelledby="early-title">
+      <div class="wrap early-grid">
+        <div>
+          <span class="marker" aria-hidden="true"></span>
+          <h2 id="early-title">Now taking early&#8209;access operators</h2>
+          <p>LightningRes is pre-launch. We are working with a small group of Australian operators who run scheduled, limited-capacity trips, and we would like to hear how you take bookings today.</p>
+          <a class="btn btn-primary" href="mailto:hello@lightningres.com?subject=Early%20access%20to%20LightningRes">Email us for early access</a>
+          <p class="small">Or write to <a href="mailto:hello@lightningres.com">hello@lightningres.com</a> with your business name, the trips you run and roughly how many passengers you carry each month.</p>
+        </div>
+        <ul class="suits">
+          <li><strong>Reef day boats</strong><span>Shared legs, island stopovers and dive add-ons</span></li>
+          <li><strong>Overnight liveaboards</strong><span>Cabins and berths across nights, dive sessions</span></li>
+          <li><strong>Day bus tours</strong><span>Hotel pickups and third-party allotments</span></li>
+          <li><strong>Scenic flights</strong><span>Fixed time slots with tight seat limits</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-grid">
+        <div>
+          <span class="marker" aria-hidden="true"></span>
+          <h2 id="contact-title">Contact and company</h2>
+          <p>LightningRes Pty Ltd is an Australian company based in Queensland, incorporated in October 2026. We build and sell reservation software to tour operators. We do not run tours or sell tours to the public.</p>
+        </div>
+        <dl class="details">
+          <div><dt>Company</dt><dd>LightningRes Pty Ltd</dd></div>
+          <div><dt>ABN</dt><dd>[ABN]</dd></div>
+          <div><dt>Address</dt><dd>[street address], Queensland, Australia</dd></div>
+          <div><dt>Phone</dt><dd>[phone]</dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:hello@lightningres.com">hello@lightningres.com</a></dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <img src="/assets/logo.svg" alt="LightningRes" width="150" height="29" loading="lazy">
+      <nav aria-label="Legal">
+        <ul>
+          <li><a href="/terms.html">Terms</a></li>
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/cancellation-and-refunds.html">Cancellation and refunds</a></li>
+        </ul>
+      </nav>
+      <p>© 2026 LightningRes Pty Ltd</p>
+    </div>
+  </footer>
+</body>
+</html>
