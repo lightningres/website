@@ -1,0 +1,30 @@
+# Design source files
+*.af
+*.afdesign
+*.afphoto
+*.afpub
+*.psd
+*.psb
+*.ai
+*.indd
+*.sketch
+*.fig
+*.xd
+*.eps
+*.tif
+*.tiff
+*.raw
+
+# OS junk
+.DS_Store
+.AppleDouble
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*:Zone.Identifier
+
+# Dependencies and tooling
+node_modules/
+.netlify/
+*.log
