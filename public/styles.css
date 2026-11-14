@@ -1155,7 +1155,23 @@ td small {
 
 /* Wider screens */
 
-/* Ask LightningRes */
+/* Ask LightningRes
+   Hidden for now. To show it again, delete this whole block: the section,
+   the nav link, "See Ask LightningRes", and the narrow-screen nav positions. */
+
+#ask,
+.nav li:has(a[href="#ask"]),
+.nav li:has(a[href="/#ask"]),
+.feature-more {
+  display: none;
+}
+
+@media (max-width: 39.99rem) {
+  .nav li:nth-child(1) { grid-column: 1 / 4; }
+  .nav li:nth-child(3) { grid-column: 4 / 7; }
+  .nav li:nth-child(4) { grid-column: 1 / 4; }
+  .nav li:nth-child(5) { grid-column: 4 / 7; }
+}
 
 .feature-more {
   margin: 0.85rem 0 0;
