@@ -17,18 +17,13 @@ public/
 netlify.toml                      publish directory, apex redirect, security and cache headers
 ```
 
-## Before going live
+## Company details
 
-Replace the visible placeholders in `public/*.html`:
+The ABN, office address, phone number and email appear in `public/index.html` (the contact section and the JSON-LD block), `public/terms.html` and `public/privacy.html`. Stripe's review checks these details, so update every copy if any of them change:
 
-- `[ABN]`
-- `[street address]`
-- `[phone]`
-- `hello@lightningres.com` is a placeholder address. Change it everywhere if it differs.
-
-Search for them with `grep -rn '\[ABN\]\|\[street address\]\|\[phone\]\|hello@lightningres.com' public`.
-
-Stripe's review checks these contact details, so fill them in before submitting. Also consider adding `"taxID"` (the ABN) and the street address to the JSON-LD block in `index.html`.
+```sh
+grep -rn '88 703 055 029\|Severn Street\|0466&nbsp;622&nbsp;375\|+61466622375\|hello@lightningres.com' public
+```
 
 ## Local preview
 
