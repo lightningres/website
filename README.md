@@ -1,12 +1,13 @@
 # lightningres.com
 
-The public website for LightningRes Pty Ltd. Plain HTML and CSS, no build step, no JavaScript.
+The public website for LightningRes Pty Ltd. Plain HTML and CSS, with one small script for the Ask demo. There is no build step.
 
 Everything that is deployed lives in `public/`. `brand/` holds the source brand files and is never deployed.
 
 ```
 public/
   index.html                      one-page site
+  ask.js                          types the Ask demo once that card is on screen
   terms.html                      policy drafts (marked for legal review in an HTML comment)
   privacy.html
   cancellation-and-refunds.html
@@ -38,24 +39,24 @@ This does not apply the headers or redirects in `netlify.toml`. To preview with 
 npx netlify-cli dev --dir public
 ```
 
-## Deploy to Netlify
+## Deploy
 
-1. Push this repo to your git host. In Netlify, choose **Add new site → Import an existing project** and select the repo.
-2. Netlify reads `netlify.toml`, so leave the build command empty. The publish directory is `public`.
-3. Alternatively, deploy from the CLI without git: `npx netlify-cli deploy --dir=public` for a draft URL, then `--prod` to publish.
-4. In **Domain management**, add `www.lightningres.com` and set it as the **primary domain**. Add `lightningres.com` as a domain alias.
-5. Update DNS as described below. Once DNS resolves, Netlify issues a Let's Encrypt certificate covering both `lightningres.com` and `www.lightningres.com`. Check that HTTPS works on both.
+The live site is https://lightningres.netlify.app. Netlify deploys it from the public repository https://github.com/lightningres/website. Push to `main` on that repository to update the live site.
 
-`netlify.toml` also redirects `https://lightningres.com/*` and `http://lightningres.com/*` to `https://www.lightningres.com/:splat` with a 301.
+Netlify reads `netlify.toml`. The build command stays empty. The publish directory is `public`.
+
+The custom domain is not connected yet. Add it later at the DNS registrar. `www.lightningres.com` will point at this Netlify site, and the bare domain `lightningres.com` will redirect to `www`. The redirects in `netlify.toml` already send `http://lightningres.com` and `https://lightningres.com` to `https://www.lightningres.com`.
+
+The personal repository `AGENGINE2050/website` is not used.
 
 ## DNS records
 
-These records assume DNS stays with your current provider ("external DNS"). Replace `YOUR-SITE` with the Netlify site name shown in the Netlify dashboard.
+Add these when the custom domain is connected. DNS stays with the current provider.
 
 | Type | Host / name | Value | Notes |
 | --- | --- | --- | --- |
-| CNAME | `www` | `YOUR-SITE.netlify.app` | Primary domain |
-| A | `@` (apex) | `75.2.60.5` | Netlify load balancer. If your provider supports ALIAS/ANAME/flattened CNAME, you can use `apex-loadbalancer.netlify.com` instead |
+| CNAME | `www` | `lightningres.netlify.app` | Primary domain |
+| A | `@` (apex) | `75.2.60.5` | Netlify load balancer. If the provider supports ALIAS, ANAME, or a flattened CNAME, use `apex-loadbalancer.netlify.com` instead |
 
 Also:
 
