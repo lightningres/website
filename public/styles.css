@@ -1370,18 +1370,32 @@ td small {
 .ask-demo .year-now {
   stroke-dasharray: 1;
   stroke-dashoffset: 0;
+}
+
+.ask-demo.is-ready:not(.is-playing) .year-prev,
+.ask-demo.is-ready:not(.is-playing) .year-now {
+  stroke-dashoffset: 1;
+}
+
+.ask-demo.is-ready:not(.is-playing) .fortnight,
+.ask-demo.is-ready:not(.is-playing) .sale {
+  opacity: 0;
+}
+
+.ask-demo.is-playing .year-prev,
+.ask-demo.is-playing .year-now {
   animation: ask-draw 1.15s ease 1.7s both;
 }
 
-.ask-demo .year-now {
+.ask-demo.is-playing .year-now {
   animation-delay: 1.95s;
 }
 
-.ask-demo .fortnight {
+.ask-demo.is-playing .fortnight {
   animation: ask-appear 0.5s ease 1.7s both;
 }
 
-.ask-demo .sale {
+.ask-demo.is-playing .sale {
   animation: ask-appear 0.45s ease 3.1s both;
 }
 
