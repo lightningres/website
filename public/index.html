@@ -607,7 +607,7 @@
           <span class="marker" aria-hidden="true"></span>
           <h2 id="early-title">Now taking early&#8209;access operators</h2>
           <p>LightningRes is pre-launch. We are working with a small group of Australian operators who run scheduled, limited-capacity trips, and we would like to hear how you take bookings today.</p>
-          <a class="btn btn-primary" href="mailto:hello@lightningres.com?subject=Early%20access%20to%20LightningRes">Email us for early access</a>
+          <a class="btn btn-primary" href="mailto:hello@lightningres.com?subject=Early%20access%20to%20LightningRes" data-waitlist-open>Join the waitlist</a>
           <p class="small">Or write to <a href="mailto:hello@lightningres.com">hello@lightningres.com</a> with your business name, the trips you run and roughly how many passengers you carry each month.</p>
         </div>
         <ul class="suits">
@@ -651,6 +651,41 @@
     </div>
   </footer>
   <a class="to-top" href="#top" aria-label="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V7M6.5 12.5 12 7l5.5 5.5"/></svg></a>
+  <dialog class="waitlist" id="waitlist" aria-labelledby="waitlist-title">
+    <button type="button" class="waitlist-close" data-waitlist-close aria-label="Close">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <form class="waitlist-form" name="waitlist" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="waitlist">
+      <input type="hidden" name="subject" value="Waitlist request from the website">
+      <p class="waitlist-hp" aria-hidden="true">
+        <label>Don’t fill this in: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+      </p>
+      <h2 id="waitlist-title">Join the waitlist</h2>
+      <p class="waitlist-lead" data-waitlist-lead>Tell us about your trips and we’ll write back.</p>
+      <div class="waitlist-fields" data-waitlist-fields>
+        <label>Your name
+          <input name="Name" autocomplete="name" required maxlength="80">
+        </label>
+        <label>Email
+          <input name="email" type="email" autocomplete="email" required maxlength="120">
+        </label>
+        <label>Business name
+          <input name="Business" autocomplete="organization" required maxlength="120">
+        </label>
+        <label>Trips you run
+          <input name="Trips" required maxlength="160" placeholder="Reef day boats, liveaboards">
+        </label>
+        <label>Passengers a month
+          <input name="Passengers a month" required maxlength="40" placeholder="About 500" autocomplete="off">
+        </label>
+        <p class="waitlist-error" data-waitlist-error hidden>That didn’t send. Email <a href="mailto:hello@lightningres.com?subject=Early%20access%20to%20LightningRes">hello@lightningres.com</a> and we’ll add you.</p>
+        <button class="btn btn-primary" type="submit">Join the waitlist</button>
+      </div>
+      <button type="button" class="btn btn-primary waitlist-done" data-waitlist-close hidden>Done</button>
+    </form>
+  </dialog>
   <script src="/ask.js" defer></script>
+  <script src="/waitlist.js" defer></script>
 </body>
 </html>
